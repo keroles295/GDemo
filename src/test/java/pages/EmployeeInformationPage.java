@@ -3,11 +3,12 @@ package pages;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import utils.CommonMethods;
 
 
 import java.util.List;
 
-public class EmployeeInformationPage  {
+public class EmployeeInformationPage extends CommonMethods {
     @FindBy(id="empsearch_id")
     public WebElement idEmployeeSearch;
 
@@ -21,7 +22,7 @@ public class EmployeeInformationPage  {
     @FindBy(xpath = "//table[@id='resultTable']/tbody/tr")
     public List<WebElement> recentAddedEmployeeTable;
 
-    //public EmployeeInformationPage(){
-      //  PageFactory.initElements(driver, this);
-  //  }
+    public EmployeeInformationPage(){
+       PageFactory.initElements(driver, this);
+    }
 }

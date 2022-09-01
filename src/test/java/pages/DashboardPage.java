@@ -3,11 +3,12 @@ package pages;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import utils.CommonMethods;
 
 
 import java.util.List;
 
-public class DashboardPage  {
+public class DashboardPage extends CommonMethods {
 
     @FindBy(id="menu_pim_viewPimModule")
     public WebElement pimOption;
@@ -26,8 +27,8 @@ public class DashboardPage  {
     public List<WebElement> dashboardTabs;
 
 
-   // public DashboardPage(){
-       // PageFactory.initElements(driver, this);
-    //}
+   public DashboardPage(){
+       PageFactory.initElements(driver, this);
+    }
 
 }

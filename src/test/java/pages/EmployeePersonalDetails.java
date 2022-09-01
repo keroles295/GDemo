@@ -3,11 +3,12 @@ package pages;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import utils.CommonMethods;
 
 
 import java.util.List;
 
-public class EmployeePersonalDetails  {
+public class EmployeePersonalDetails extends CommonMethods {
 
     @FindBy(id = "personal_txtOtherID")
     public WebElement otherId;
@@ -62,9 +63,9 @@ public class EmployeePersonalDetails  {
     public WebElement cancelButton;
 
 
-   // public EmployeePersonalDetails(){
-      //  PageFactory.initElements(driver,this);
-   // }
+    public EmployeePersonalDetails(){
+        PageFactory.initElements(driver,this);
+    }
 
 
 
